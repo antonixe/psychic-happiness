@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Hotel Reservation</title>
+    <meta charset="utf-8">
+    <link rel="icon" href="/site/img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/site/img/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your keywords">
+    <meta name="author" content="Your name">
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="/site/css/bootstrap.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/site/css/responsive.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/site/css/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/site/css/nivo-slider.css" type="text/css" media="screen">
+    <script type="text/javascript" src="/site/js/jquery.js"></script>
+    <script type="text/javascript" src="/site/js/superfish.js"></script>
+    <script type="text/javascript" src="/site/js/jquery.mobilemenu.js"></script>
+    <script type="text/javascript" src="/site/js/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="/site/js/jquery.equalheights.js"></script>
+    <script type="text/javascript" src="/site/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+     prevText: '',
+           nextText: ''
+      });
+        jQuery(".maxheight").equalHeights();
+    });
+    </script>
+</head>
+
+<body>
+    <!--==============================header=================================-->
+    <header>
+        <div class="container">
+            <div class="navbar navbar_ clearfix">
+                <div class="navbar-inner">
+                    <div class="clearfix">
+                        <h1 class="brand"><a href="/"><img src="/site/img/logo.png" alt=""></a><span>hotel luxury</span></h1>
+                        <div class="nav-collapse nav-collapse_ collapse">
+                            <a href="#"></a>
+                            <ul class="nav sf-menu clearfix">
+                                <li class="active"><a href="/">Home <span>...welcome page</span></a></li>
+                                <li class="sub-menu">
+                                    <a href="/assets/room">Rooms <span>...packages &amp; deals</span></a>
+                                    <!-- <ul>
+                                        <li><a href="#">Corporate</a></li>
+                                        <li class="sub-menu-1">
+                                            <a href="#">Family</a>
+                                            <ul>
+                                                <li><a href="#">Gallery</a></li>
+                                                <li><a href="#">Activities</a></li>
+                                                <li><a href="#">Offers</a></li>
+                                                <li><a href="#">Bonus</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Honeymoon</a></li>
+                                        <li><a href="#">Faqs</a></li>
+                                    </ul> -->
+                                </li>
+                                <li><a href="/assets/booking">Booking <span>...prices &amp;  offers</span></a></li>
+                                <li><a href="/assets/about">About <span>...who we are</span></a></li>
+                                <li><a href="/assets/mail">Mail <span>...stay in touch</span></a></li>
+                                <li><a href="#">Hotel Reservation <span>...book with luxury</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+        <div class="container">
+            <form method="post" action="/assets" onSubmit="return validateForm();">
+                <div style="max-width: 400px;">
+                </div>
+                <div style="padding-bottom: 18px;font-size : 24px;">Hotel Reservation</div>
+                <div style="display: flex; flex-wrap:wrap; width: 700px;">
+                    <div style="display: flex; padding-bottom: 18px; margin:0 10px;max-width : 450px;">
+                        <div style=" margin-left: 0; margin-right: 1%; width: 49%;">
+                            First name<span style="color: red;"> *</span><br />
+                            <input type="text" id="data_2" name="firstname" style="max-width: 100%;" class="form-control" />
+                        </div>
+                        <div style=" margin-left: 1%; margin-right: 0; width: 49%;">
+                            Last name<span style="color: red;"> *</span><br />
+                            <input type="text" id="data_3" name="lastname" style="max-width: 100%;" class="form-control" />
+                        </div>
+                    </div><div style="padding-bottom: 18px; margin:0 10px;">
+                        Phone<span style="color: red;"> *</span><br />
+                        <input type="text" id="data_4" name="phonenumber" style="max-width : 450px;" class="form-control" />
+                    </div>
+                    <div style="padding-bottom: 18px; margin:0 10px;">
+                        Email<span style="color: red;"> *</span><br />
+                        <input type="text" id="data_5" name="email" style="max-width : 450px;" class="form-control" />
+                    </div>
+                    <div style="padding-bottom: 18px; margin:0 10px;">
+                        Arrival date<span style="color: red;"> *</span><br />
+                        <input type="date" id="data_6" name="arrivaldate" style="max-width : 250px;" class="form-control" />
+                    </div>
+                    <div style="padding-bottom: 18px; margin:0 10px;">
+                        Departure date<span style="color: red;"> *</span><br />
+                        <input type="date" id="data_7" name="departuredate" style="max-width : 250px;" class="form-control" />
+                    </div>
+                    <div style="padding-bottom: 18px; margin:0 10px;">
+                        Number of adults<span style="color: red;"> *</span><br />
+                        <input type="number" id="data_8" name="numberofadults" style="max-width : 250px;" class="form-control" />
+                    </div>
+                    <div style="padding-bottom: 18px; margin:0 10px;">
+                        Number of children<br />
+                        <input type="number" id="data_9" name="numberofchildren" style="max-width : 250px;" class="form-control" />
+                    </div>
+                    <div style="padding-bottom: 18px; margin:0 10px;">
+                        Comments / Questions<br />
+                        <input type="text" id="messages data_10" name="messages" style="max-width : 250px;" class="form-control" />
+                    </div>
+                </div>
+                <button style="padding: 8px; font-size: larger;" type="submit">Submit</button>
+            </form>
+
+            <script type="text/javascript">
+                function validateForm() {
+                    if (isEmpty(document.getElementById('data_2').value.trim())) {
+                        alert('First name is required!');
+                        return false;
+                    }
+                    if (isEmpty(document.getElementById('data_3').value.trim())) {
+                        alert('Last name is required!');
+                        return false;
+                    }
+                    if (isEmpty(document.getElementById('data_4').value.trim())) {
+                        alert('Phone is required!');
+                        return false;
+                    }
+                    if (isEmpty(document.getElementById('data_5').value.trim())) {
+                        alert('Email is required!');
+                        return false;
+                    }
+                    if (!validateEmail(document.getElementById('data_5').value.trim())) {
+                        alert('Email must be a valid email address!');
+                        return false;
+                    }
+                    if (isEmpty(document.getElementById('data_6').value.trim())) {
+                        alert('Arrival date is required!');
+                        return false;
+                    }
+                    if (isEmpty(document.getElementById('data_7').value.trim())) {
+                        alert('Departure date is required!');
+                        return false;
+                    }
+                    if (isEmpty(document.getElementById('data_8').value.trim())) {
+                        alert('Number of adults is required!');
+                        return false;
+                    }
+                    return true;
+                }
+                function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+                function validateEmail(email) {
+                    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,15}(?:\.[a-z]{2})?)$/i;
+                    return isEmpty(email) || re.test(email);
+                }
+            </script>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <article class="span6 fright">
+                    <ul class="menu-footer">
+                        <li class="current"><a href="i/">Home</a></li>
+                        <li><a href="/assets/room">rooms</a></li>
+                        <li><a href="/assets/booking">booking</a></li>
+                        <li><a href="/assets/about">about</a></li>
+                        <li><a href="/assets/mail">mail</a></li>
+                    </ul>
+                </article>
+                <article class="span6 fleft">
+                    <span>Hotel luxury &copy; 2022 | &nbsp;&nbsp;</span><a href="#">Designed by: Mwaniki Kelvin & Antony Khaoya</a><br><!-- {%FOOTER_LINK} -->
+                </article>
+
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="/site/js/bootstrap.js"></script>
+</body>
+</html>
